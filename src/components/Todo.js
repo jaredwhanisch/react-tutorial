@@ -21,6 +21,8 @@ function Todo(props) {
           Delete
         </button>
       </div>
+      {/* This is a short-hand Ternary expression of: {modalIsOpen ? <Modal /> : null}
+       where, if both are true, the second will be returned  */}
       {modalIsOpen && <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler} />}
       {modalIsOpen && <Backdrop onClick={closeModalHandler} />}
     </div>
